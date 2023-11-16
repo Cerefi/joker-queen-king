@@ -31,12 +31,14 @@ body {
     flex: 1 0 0;
 }
 
-.top-div {
+.top-div,
+.player-div {
     display: flex;
 }
 
-.top-div * {
-    /* outline: 2px solid yellow; */
+.top-div * ,
+.player-div *{
+    outline: 2px solid yellow;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -44,12 +46,12 @@ body {
 }
 
 .score,
-.top-div-leftspace{
+.leftspace{
     flex: .5 0 0;
     font-size: 20px;
 }
 
-.computer-display {
+.display {
     flex: 1 0 0;
 }
 
@@ -60,5 +62,11 @@ body {
 }
 
 .declaration-div {
+    outline: 2px solid yellow;
     flex: .25 0 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 500;
+    font-size: 25px;
 }
