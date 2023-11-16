@@ -1,5 +1,5 @@
 * {
-    outline: 2px solid coral;
+    /* outline: 2px solid coral; */
     /* background-color: #b3cde0; */
 }
 
@@ -15,4 +15,50 @@ body {
     color: #454441;
     text-align: center;
     padding: 15px;
+}
+
+.body {
+    outline: 2px solid coral;
+    width: 360px;
+    height: 600px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.body * {
+    /* outline: 2px solid yellow; */
+    flex: 1 0 0;
+}
+
+.top-div {
+    display: flex;
+}
+
+.top-div * {
+    /* outline: 2px solid yellow; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.score,
+.top-div-leftspace{
+    flex: .5 0 0;
+    font-size: 20px;
+}
+
+.computer-display {
+    flex: 1 0 0;
+}
+
+.cards {
+    flex: 0 0 auto;
+    width: 90px;
+    height: 130px;
+}
+
+.declaration-div {
+    flex: .25 0 0;
 }
