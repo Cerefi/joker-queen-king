@@ -2,33 +2,47 @@ const choices = ['joker', 'queen', 'king'];
 const jokerBtn = document.querySelector('#joker');
 const queenBtn = document.querySelector('#queen');
 const kingBtn = document.querySelector('#king');
-const pScore = document.querySelector('.computer-div .score');
-const cScore = document.querySelector('.player-div .score')
+const cScore = document.querySelector('#computerScore');
+const pScore = document.querySelector('#playerScore');
+const declare = document.querySelector('.declaration-div');
 let computerScore = 0;
 let playerScore = 0;
 
 jokerBtn.addEventListener('click', () => {
-    round('joker', randomChoice);
+    round('joker', randomChoice());
     pScore.textContent = playerScore;
     cScore.textContent = computerScore;
+    win();
 })
 
 queenBtn.addEventListener('click', () => {
     round('queen', randomChoice);
     pScore.textContent = playerScore;
     cScore.textContent = computerScore;
+    win();
 })
 
 kingBtn.addEventListener('click', () => {
     round('king', randomChoice);
     pScore.textContent = playerScore;
     cScore.textContent = computerScore;
+    win();
 })
 
 
 function randomChoice() {
     const random = Math.floor(Math.random()*3);
     return choices[random];
+}
+
+function win() {
+    if (playerScore === 3) {
+        declare.textContent = 'YOU WIN!';
+    }
+    else if (computerScore === 3) {
+        declare.textContent = 'YOU LOSE!';
+    }
+    return;
 }
 
 function round(player, computer) {
