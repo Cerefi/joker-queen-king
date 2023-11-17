@@ -55,12 +55,12 @@ function randomChoice() {
 }
 
 function win() {
-    if (playerScore === 3) {
+    if (playerScore === 5) {
         declare.textContent = 'YOU WIN!';
         declaration.appendChild(button);
   
     }
-    else if (computerScore === 3) {
+    else if (computerScore === 5) {
         declare.textContent = 'YOU LOSE!';
         declaration.appendChild(button);
 
