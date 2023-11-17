@@ -18,8 +18,9 @@ body {
 }
 
 .body {
-    outline: 2px solid coral;
-    width: 360px;
+    /* outline: 2px solid coral; */
+    min-width: 360px;
+    max-width: 600px;
     height: 600px;
     margin: auto;
     display: flex;
@@ -27,7 +28,7 @@ body {
 }
 
 .body * {
-    /* outline: 2px solid yellow; */
+    outline: 2px solid yellow;
     display: flex;
     flex: 1 0 0;
 }
@@ -35,7 +36,7 @@ body {
 .computer-div * ,
 .player-div *,
 .choices-div{
-    outline: 2px solid yellow;
+    /* outline: 2px solid yellow; */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -59,7 +60,7 @@ body {
 }
 
 .declaration-div {
-    outline: 2px solid yellow;
+    /* outline: 2px solid yellow; */
     flex: .25 0 0;
     display: flex;
     justify-content: center;
