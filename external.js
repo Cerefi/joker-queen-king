@@ -70,23 +70,23 @@ function win() {
 
 function display(player, computer) {
     if (player === 'joker') {
-        playerDisplay.setAttribute('src', '/player-joker.png')
+        playerDisplay.setAttribute('src', './player-joker.png')
     }
     else if (player === 'queen') {
-        playerDisplay.setAttribute('src', '/player-queen.png')
+        playerDisplay.setAttribute('src', './player-queen.png')
     }
     else {
-        playerDisplay.setAttribute('src', '/player-king.png')
+        playerDisplay.setAttribute('src', './player-king.png')
     }
 
     if (computer === 'joker') {
-        computerDisplay.setAttribute('src', '/computer-joker.png')
+        computerDisplay.setAttribute('src', './computer-joker.png')
     }
     else if (computer === 'queen') {
-        computerDisplay.setAttribute('src', '/computer-queen.png')
+        computerDisplay.setAttribute('src', './computer-queen.png')
     }
     else {
-        computerDisplay.setAttribute('src', '/computer-king.png')
+        computerDisplay.setAttribute('src', './computer-king.png')
     }
 }
 
