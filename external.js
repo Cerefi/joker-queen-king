@@ -4,13 +4,22 @@ const queenBtn = document.querySelector('#queen');
 const kingBtn = document.querySelector('#king');
 const cScore = document.querySelector('#computerScore');
 const pScore = document.querySelector('#playerScore');
-const declare = document.querySelector('.declaration-div');
+const declare = document.querySelector('#declare');
 const playerDisplay = document.querySelector('#player-display');
 const computerDisplay = document.querySelector('#computer-display');
-let playerCard = document.createElement('img');
-let computerCard = document.createElement('img');
+const declaration = document.querySelector('.declaration-div')
+const body = document.querySelector('.body');
+const button = document.createElement('button');
+const playerCard = document.createElement('img');
+const computerCard = document.createElement('img');
 let computerScore = 0;
 let playerScore = 0;
+button.setAttribute('class', 'play-again');
+button.textContent = 'PLAY AGAIN';
+button.addEventListener('click', function(event) {
+    location.replace(location.href);
+    event.preventDefault();
+})
 
 jokerBtn.addEventListener('click', () => {
     let rChoice = randomChoice();
@@ -48,9 +57,13 @@ function randomChoice() {
 function win() {
     if (playerScore === 3) {
         declare.textContent = 'YOU WIN!';
+        declaration.appendChild(button);
+  
     }
     else if (computerScore === 3) {
         declare.textContent = 'YOU LOSE!';
+        declaration.appendChild(button);
+
     }
     return;
 }
